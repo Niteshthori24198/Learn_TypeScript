@@ -20,3 +20,22 @@ let obj = {
         return true;
     }
 };
+let empobj = {
+    id: 1,
+    name: 'xx',
+    retire: (date) => {
+        if (date)
+            return false;
+        return true;
+    }
+};
+let h = {
+    zym: () => { },
+    work: () => { }
+};
+let a = 5;
+let b = 2;
+function add(x, y) {
+    return y ? x + y : x;
+}
+let x = '2';
