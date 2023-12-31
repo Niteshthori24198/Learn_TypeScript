@@ -67,3 +67,65 @@ class Student extends Person {
 
 let student = new Student(1, "John", 20);
 student.walk()
+
+
+
+
+
+// interface
+
+interface Janta {
+    name: string
+    age: number
+    doglapan: () => void
+}
+
+class Chintu implements Janta {
+    name: string
+    age: number
+
+    constructor(name: string, age: number) {
+        this.name = name
+        this.age = age
+    }
+
+    doglapan() {
+        throw new Error("Method not implemented.");
+    }
+}
+
+
+
+
+// generics
+
+class KeyvaluePair<K, V>{
+
+    constructor(public key: K, public value: V) { }
+}
+
+let pairs = [new KeyvaluePair<string, number>('a', 1), new KeyvaluePair<number, string>(2, 'b')]
+
+
+function getKeyvaluePair<K, V>(key: K, value: V): KeyvaluePair<K, V> {
+    return new KeyvaluePair<K, V>(key, value);
+}
+
+getKeyvaluePair<string, number>('a', 1);
+
+
+
+// generics constrains : we can add constraints to generics by using extends keyword : <T extends string> <T extends number> <T extends object> <T extends class> etc
+
+function getLength<T extends string | number>(str: T): number {
+    return str.toString().length
+}
+
+getLength<string>('a');
+
+
+// keyOf type guard : used to check if a key is present in an object
+
+
+
+
