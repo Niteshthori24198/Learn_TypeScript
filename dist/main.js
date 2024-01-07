@@ -43,3 +43,27 @@ class Student extends Person {
 }
 let student = new Student(1, "John", 20);
 student.walk();
+class Chintu {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    doglapan() {
+        throw new Error("Method not implemented.");
+    }
+}
+class KeyvaluePair {
+    constructor(key, value) {
+        this.key = key;
+        this.value = value;
+    }
+}
+let pairs = [new KeyvaluePair('a', 1), new KeyvaluePair(2, 'b')];
+function getKeyvaluePair(key, value) {
+    return new KeyvaluePair(key, value);
+}
+getKeyvaluePair('a', 1);
+function getLength(str) {
+    return str.toString().length;
+}
+getLength('a');
